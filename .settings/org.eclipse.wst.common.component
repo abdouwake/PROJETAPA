@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SIAPA">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/dao"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/servlets"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/beans"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TravailCommun"/>
+        <property name="context-root" value="SIAPA"/>
+        <property name="java-output-path" value="/SIAPA/build/classes"/>
+    </wb-module>
+</project-modules>
