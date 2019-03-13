@@ -1,3 +1,16 @@
-.navbar {
-	background-color : #3A1F35;
+
+footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+}
+
+
+nav li a {
+	color:white;
+}
+
+nav li a:hover{
+	color:#4eea46;
 }

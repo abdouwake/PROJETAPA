@@ -5,7 +5,7 @@ import java.util.Date;
 public class Utilisateur {
 	
 	
-	private String id;
+	private Long id;
 	private String username;
 	private String nom;
 	private String prenom;
@@ -21,11 +21,11 @@ public class Utilisateur {
 		this.sexe = sexe;
 	}
 	
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setId(long id) {
+		this.id = (long) id;
 	}
 	public String getUsername() {
 		return username;

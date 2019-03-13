@@ -8,9 +8,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+
 public class DAOFactory {
 	
-private static final String FICHIER_PROPERTIES = "\\com\\sdzee\\dao\\dao.properties";
+private static final String FICHIER_PROPERTIES = "\\membres\\commun\\dao\\dao.properties";
 private static final String PROPERTY_URL = "url";
 private static final String PROPERTY_DRIVER = "driver";
 private static final String PROPERTY_NOM_UTILISATEUR = "nomutilisateur";
@@ -79,6 +80,9 @@ return DriverManager.getConnection( url, username, password );
 * METTEZ ICI TOUTES LES METHODES  de récupération de l'implémentation des différents DAO
 */
 
+public UtilisateurDao getUtilisateurDao() {
+return new UtilisateurDaoImpl( this );
+}
 
 
 }

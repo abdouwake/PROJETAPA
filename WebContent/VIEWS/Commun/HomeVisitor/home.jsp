@@ -7,10 +7,9 @@
 	<meta charset="UTF-8">
 	<title>Home</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/VIEWS/utiles/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/VIEWS/Commun/css/home.css">
 	<script src="${pageContext.request.contextPath }/VIEWS/utiles/bootstrap/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/VIEWS/Commun/css/home.css">
 </head>
-
 <body>	
 
 
