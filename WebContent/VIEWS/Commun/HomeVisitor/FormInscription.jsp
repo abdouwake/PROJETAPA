@@ -11,7 +11,8 @@
 </head>
 
 	<body>
-		<%@ include file="navbar.jsp" %>  
+		<%@ include file="navbar.jsp" %>
+			
 	<br>
 	<br>
 	<div class="container">
@@ -23,33 +24,41 @@
 	
 	
 	<form method="post" action="<c:url value="/inscription"/>">
-	 <!-- ********************************************************************************* -->
+	 <!--  ********************************************************************************* -->
 	<div class="form-group input-group">
 		<div class="input-group-prepend">
-		  
 		 </div>
         <input name="username" class="form-control" placeholder="Pseudonyme" type="text"> 
-        <br>
-         <span class="alert alert-danger" role="alert">${erreurs['username']}</span>
     </div>
+    <c:if test="${ form.erreurs['username'] !=null }">
+		<span class="alert alert-danger" role="alert">${form.erreurs['username']}</span>
+</c:if>
+
+		
+
     <!-- ********************************************************************************* -->
 
 	<div class="form-group input-group">
 		<div class="input-group-prepend">
 		   
 		 </div>
-        <input name="nom" class="form-control" placeholder="Nom" type="text"> 
-        
-    </div>
+         <input name="nom" class="form-control" placeholder="Nom" type="text"> 
+   		 </div>
+   		 <c:if test="${ form.erreurs['nom'] !=null }">
+   		<span class="alert alert-danger" role="alert">${form.erreurs['nom']}</span> 
+     	</c:if>
+    
     <!-- ********************************************************************************* -->
     
     <div class="form-group input-group">
 		<div class="input-group-prepend">
 		
 		 </div>
-        <input name="prenom" class="form-control" placeholder="Prenom" type="text"> 
-       
+        <input name="prenom" class="form-control" placeholder="Prenom" type="text">        
     </div>
+    <c:if test="${ form.erreurs['prenom'] !=null }">
+           	<span class="alert alert-danger" role="alert">${form.erreurs['prenom']}</span>
+    </c:if>
     <!-- ********************************************************************************* -->
         
         
@@ -57,12 +66,12 @@
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		   
-		 </div>
+	 </div>
         <input name="email" class="form-control" placeholder="adresse mail" type="email">
-        <br>
-        <span class="alert alert-danger" role="alert">${erreurs['email']}</span>
-        
     </div> <!-- form-group// -->
+    <c:if test="${ form.erreurs['email'] !=null }">
+            <span class="alert alert-danger" role="alert">${form.erreurs['email']}</span>
+    </c:if>
     <div class="form-group input-group">
     	
     </div> <!-- form-group// -->
@@ -74,30 +83,30 @@
 			<option selected="sexe"> Sexe </option>
 			<option>Masculin</option>
 			<option>Féminin</option>
-		</select>
-		<br>
-		<span class="alert alert-danger" role="alert">${erreurs['sexe']}</span>
-		
-	</div> <!-- form-group end.// -->
+		</select>		
+	</div> <!-- form-group end.// -->	
+	<c:if test="${ form.erreurs['sexe'] !=null }">
+	
+			<span class="alert alert-danger" role="alert">${form.erreurs['sexe']}</span>
+		</c:if>
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		 
 		</div>
         <input name="password" class="form-control" placeholder="Votre mot de passe" type="password">
-         <br>
-        		<span class="alert alert-danger" role="alert">${erreurs['password']}</span>
-        		 
-        
-    </div> <!-- form-group// -->
+        </div> <!-- form-group// -->
+        	<c:if test="${ form.erreurs['password'] !=null }">
+        <span class="alert alert-danger" role="alert">${form.erreurs['password']}</span>
+        </c:if>
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    
 		</div>
         <input name="confmdp" class="form-control" placeholder="Répétez votre mot de passe" type="password">
-         <br>
-       	<span class="alert alert-danger" role="alert">${erreurs['confmdp']}</span>
-        
     </div> <!-- form-group// -->                                      
+    	<c:if test="${ form.erreurs['sexe'] !=null }">
+           	<span class="alert alert-danger" role="alert">${form.erreurs['confmdp']}</span>
+           	</c:if>
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block"> Créer un compte !  </button>
     </div> <!-- form-group// -->      
@@ -112,6 +121,6 @@
 		
 		
 			<%@ include file="footer.jsp" %>
-		 
+		 	
 		</body>
 	</html>

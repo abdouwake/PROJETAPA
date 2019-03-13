@@ -83,9 +83,21 @@ public class InscriptionForm {
 			}catch (Exception e) {
 				setErreur(CHAMP_USERNAME,e.getMessage());
 			}
-			
 			utilisateur.setUsername(username);
+			
+			try { ValidationNom(nom);
+			}catch (Exception e) {
+				setErreur(CHAMP_NOM,e.getMessage());
+			}
+			
+			
 			utilisateur.setNom(nom);
+			
+			
+			try { ValidationPrenom(prenom);
+			}catch (Exception e) {
+				setErreur(CHAMP_PRENOM,e.getMessage());
+			}
 			utilisateur.setPrenom(prenom);
 			
 			if(erreurs.isEmpty()) {
@@ -133,28 +145,35 @@ public class InscriptionForm {
 
 	
 	private void ValidationSexe ( String sexe ) throws Exception {
-		if ( sexe == null ) {
+		if ( !sexe.equals("sexe") ) {
 		throw new Exception( "Merci de saisir votre sexe." );
 		}
 		} 
 		
-	
+	private void ValidationNom(String nom) throws Exception {
+		if (nom==null) {
+			throw new Exception ("Merci de saisir votre nom.");
+		}
+	}
 	
 	private void validationMotsDePasse( String motDePasse, String confirmation ) throws Exception {
 			if ( motDePasse != null && confirmation != null ) {
 			if ( !motDePasse.equals( confirmation ) ) {
-			throw new Exception( "Les mots de passe entrés sontdifférents, merci de les saisir à nouveau." );
+			throw new Exception( "Mots de passes différents !" );
 			} else if ( motDePasse.length() < 3 ) {
 			throw new Exception( "Les mots de passe doivent contenir au moins 3 caractères." );
 			}
 			} else {
-			throw new Exception( "Merci de saisir et confirmer votre motde passe." );
+			throw new Exception( "Merci de saisir mot de passe." );
 			}
 			}
 
 	private void ValidationUsername( String username ) throws Exception {
-		if ( username != null && username.length() < 3 ) {
-		throw new Exception( "Le nom doit contenir au moins 3 caractères." );
+		if ( username == null) {
+		throw new Exception( "Veuillez entrer un pseudonyme ! " );
+		} else if (username.length() < 3 ) {
+			throw new Exception( "Le nom doit contenir au moins 3 caractères." );
+
 		}
 		}
 	

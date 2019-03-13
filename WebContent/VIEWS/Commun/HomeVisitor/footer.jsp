@@ -1,3 +1,5 @@
+<div class="push"></div>
+  </div>
 <!-- Footer -->
 <footer class="page-footer font-small blue" style="background-color:#3A1F35;">
 

@@ -57,6 +57,8 @@ public class inscription extends HttpServlet {
 		request.setAttribute( ATT_FORM, form );
 		request.setAttribute( ATT_USER, utilisateur );
 		
+	
+		
 		if (form.isOk()==true)  {
 		this.getServletContext().getRequestDispatcher(VUE1).forward(request, response);
 		}
