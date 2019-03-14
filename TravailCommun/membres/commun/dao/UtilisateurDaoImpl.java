@@ -8,7 +8,7 @@ import membres.commun.beans.Utilisateur;
 
 public class UtilisateurDaoImpl implements UtilisateurDao {
 	
-		private static final String SQL_INSERT = "INSERT INTO public.\"Utilisateur\" (id, username, nom, prenom, password, email, sexe) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		private static final String SQL_INSERT = "INSERT INTO public.\"Utilisateur\" ( username, nom, prenom, password, email, sexe) VALUES (?, ?, ?, ?, ?, ?)";
 		
 		private DAOFactory daoFactory; 
 
@@ -25,23 +25,25 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 		
 		try {
 			connexion = daoFactory.getConnection();
-			preparedStatement = utile.initialisationRequetePreparee(connexion, SQL_INSERT, true,25,u.getUsername(),u.getNom(),u.getPrenom(),u.getPassword(),u.getEmail(),u.getSexe());
+			preparedStatement = utile.initialisationRequetePreparee(connexion, SQL_INSERT, true,u.getUsername(),u.getNom(),u.getPrenom(),u.getPassword(),u.getEmail(),u.getSexe());
 
 			int statut = preparedStatement.executeUpdate();
 			if ( statut == 0 ) {
 			throw new DAOException( "Échec de la création de l'utilisateur, aucune ligne ajoutée dans la table." );
 			}
 			
-	valeursAutoGenerees = preparedStatement.getGeneratedKeys();
+	/*
+	 valeursAutoGenerees = preparedStatement.getGeneratedKeys();
 	if ( valeursAutoGenerees.next() ) {
 	u.setId( valeursAutoGenerees.getLong( 1 ) );
 	} else {
 	throw new DAOException( "Échec de la création de l'utilisateur en base, aucun ID auto-généré retourné." );
-	}
+	}*/
 	} catch ( SQLException e ) {
 	throw new DAOException( e );
 	} finally {
 	utile.fermeturesSilencieuses( valeursAutoGenerees,preparedStatement, connexion );
+	
 	}
 	}
 	

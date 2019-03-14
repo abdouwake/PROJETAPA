@@ -4,7 +4,7 @@
 
 
 <nav class="navbar navbar-expand-lg static-top" style="background-color: #3A1F35;">
-<a href="home.jsp"><img src="../../images/Logo.png" style="width: 20%;"></a> 
+<a href="home.jsp"><img src="${pageContext.request.contextPath }/images/Logo.png" style="width: 20%;"></a> 
     <div class="container">
      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

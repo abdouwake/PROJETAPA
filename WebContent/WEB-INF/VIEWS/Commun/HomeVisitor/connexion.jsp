@@ -13,7 +13,7 @@
 <body>
 
 
-<%@ include file="navbar.jsp" %>  
+<%@ include file="../navbar.jsp" %>  
 <br>
 <br>
 
@@ -60,6 +60,6 @@
 		
 		
 		
-		<%@ include file="footer.jsp" %>
+		<%@ include file="../footer.jsp" %>
 </body>
 </html>

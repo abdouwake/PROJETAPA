@@ -1,5 +1,4 @@
 
-
 .divider-text {
     position: relative;
     text-align: center;
@@ -24,13 +23,11 @@
 
 select option{ 
     color:#3A1F35;
-    
 }
 
 .btn-primary{
     background-color: #3A1F35;
-    border  : none;
-    
+    border  : none;    
 }
 .btn-primary:hover{
 	background-color :  #8c5181 ;
@@ -59,10 +56,6 @@ input[type="color"]:focus,
 }
 
 
-
-
-
-
 nav li a {
 	color:white;
 }
@@ -72,7 +65,7 @@ nav li a:hover{
 }
 
 
-footer {
+.footer {
  position : absolute;
  margin-bottom : 0px;
 }

@@ -1,6 +1,8 @@
 package membres.commun.servlets;
 
 import java.io.IOException;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,10 +23,9 @@ public class inscription extends HttpServlet {
 	private UtilisateurDao utilisateurDao;
 	public static final String ATT_USER = "utilisateur";
 	public static final String ATT_FORM = "form";
-	public static final String VUE1 = "/VIEWS/Commun/HomeMember/homeMember.jsp";
-	public static final String VUE2 = "/VIEWS/Commun/HomeVisitor/FormInscription.jsp";
+	public static final String VUE1 = "/WEB-INF/VIEWS/Commun/HomeMember/homeMember.jsp";
+	public static final String VUE2 = "/WEB-INF/VIEWS/Commun/HomeVisitor/FormInscription.jsp";
 	
-
 	
 	private static final long serialVersionUID = 1L;
        
@@ -57,14 +58,12 @@ public class inscription extends HttpServlet {
 		request.setAttribute( ATT_FORM, form );
 		request.setAttribute( ATT_USER, utilisateur );
 		
-	
 		
 		if (form.isOk()==true)  {
 		this.getServletContext().getRequestDispatcher(VUE1).forward(request, response);
 		}
 		else {
 		this.getServletContext().getRequestDispatcher(VUE2).forward(request, response);
-
 		}
 		
 	}

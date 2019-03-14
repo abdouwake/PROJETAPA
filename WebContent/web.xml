@@ -9,10 +9,17 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-<listener>
-<listener-class>membres.commun.dao.InitialisationDaoFactory</listener-class>
-</listener>
+
+<servlet>
+<servlet-name>inscription</servlet-name>
+<servlet-class>membres.commun.servlets.inscription</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>inscription</servlet-name>
+<url-pattern>/inscription</url-pattern>
+</servlet-mapping>
+
 
 
 </web-app>

@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>Inscription</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/VIEWS/utiles/bootstrap/css/bootstrap.min.css">
-	<script src="${pageContext.request.contextPath }/VIEWS/utiles/bootstrap/js/jquery.min.js"></script>
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/VIEWS/Commun/css/inscription.css">
+	<link	 rel="stylesheet" href="${pageContext.request.contextPath }/utiles/bootstrap/css/bootstrap.min.css">
+	<script  src="${pageContext.request.contextPath }/utiles/bootstrap/js/jquery.min.js"></script>
+	<link 	 rel="stylesheet" href="${pageContext.request.contextPath }/css/inscription.css">
 </head>
 
 	<body>
-		<%@ include file="navbar.jsp" %>
-			
+		<%@ include file="../navbar.jsp" %>			
 	<br>
 	<br>
 	<div class="container">
@@ -34,7 +34,6 @@
 		<span class="alert alert-danger" role="alert">${form.erreurs['username']}</span>
 </c:if>
 
-		
 
     <!-- ********************************************************************************* -->
 
@@ -85,10 +84,8 @@
 			<option>Féminin</option>
 		</select>		
 	</div> <!-- form-group end.// -->	
-	<c:if test="${ form.erreurs['sexe'] !=null }">
 	
-			<span class="alert alert-danger" role="alert">${form.erreurs['sexe']}</span>
-		</c:if>
+		
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		 
@@ -104,7 +101,7 @@
 		</div>
         <input name="confmdp" class="form-control" placeholder="Répétez votre mot de passe" type="password">
     </div> <!-- form-group// -->                                      
-    	<c:if test="${ form.erreurs['sexe'] !=null }">
+    	<c:if test="${ form.erreurs['confmdp'] !=null }">
            	<span class="alert alert-danger" role="alert">${form.erreurs['confmdp']}</span>
            	</c:if>
     <div class="form-group">
@@ -119,8 +116,8 @@
 		
 		
 		
-		
-			<%@ include file="footer.jsp" %>
-		 	
+			<br>
+			<%@ include file="../footer.jsp" %>
+		 
 		</body>
 	</html>

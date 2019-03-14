@@ -73,10 +73,7 @@ public class InscriptionForm {
 		    utilisateur.setPassword( password );*/
 		
 			 
-			try { ValidationSexe(sexe);
-			}catch (Exception e) {
-				setErreur (CHAMP_SEXE,e.getMessage());
-			}
+			
 			utilisateur.setSexe(sexe);
 			
 			try {ValidationUsername(username);
