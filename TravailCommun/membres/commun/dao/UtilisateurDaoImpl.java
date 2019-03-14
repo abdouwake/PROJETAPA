@@ -9,7 +9,7 @@ import membres.commun.beans.Utilisateur;
 public class UtilisateurDaoImpl implements UtilisateurDao {
 	
 		private static final String SQL_INSERT = "INSERT INTO public.\"Utilisateur\" ( username, nom, prenom, password, email, sexe) VALUES (?, ?, ?, ?, ?, ?)";
-		
+		private static final String SQL_SELECT = "SELECT username,password FROM public.\"Utilisateur\" where username=? AND password=?";
 		private DAOFactory daoFactory; 
 
 		UtilisateurDaoImpl( DAOFactory daoFactory ) {
@@ -46,7 +46,42 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 	
 	}
 	}
-	
+
+	 
+	 
+	@Override
+	public Utilisateur trouver(String username, String password) throws DAOException {
+		Connection 		  connexion 			 = null;
+		PreparedStatement preparedStatement      = null;
+		ResultSet         valeursAutoGenerees    = null;
+		DAOUtilitaire     utile 				 = new DAOUtilitaire();
+		Utilisateur u = new Utilisateur();
+		
+		try{
+				connexion = daoFactory.getConnection();
+				preparedStatement = utile.initialisationRequetePreparee(connexion, SQL_SELECT,false,username,password);	
+				
+				preparedStatement.setString( 1, username );
+				preparedStatement.setString( 2, password );
+				
+				ResultSet resultat = preparedStatement.executeQuery();
+				
+				/* Récupération des données du résultat de la requête de lecture */
+				while ( resultat.next() ) {
+					u.setUsername(resultat.getString("username"));
+					u.setPassword(resultat.getString("password"));
+				}
+				
+		}catch (SQLException e){
+			
+			 
+			u=null;
+			
+		}finally {
+			utile.fermeturesSilencieuses( valeursAutoGenerees,preparedStatement, connexion );
+		}
+		return u;
+	}
 	
 }
 

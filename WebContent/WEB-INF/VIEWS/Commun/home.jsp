@@ -6,14 +6,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/VIEWS/utiles/bootstrap/css/bootstrap.min.css">
-	<script src="${pageContext.request.contextPath }/VIEWS/utiles/bootstrap/js/jquery.min.js"></script>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/VIEWS/Commun/css/home.css">
+	
+	<link	 rel="stylesheet" href="${pageContext.request.contextPath }/utiles/bootstrap/css/bootstrap.min.css">
+	<script  src="${pageContext.request.contextPath }/utiles/bootstrap/js/jquery.min.js"></script>
+	<link 	 rel="stylesheet" href="${pageContext.request.contextPath }/css/home.css">
 </head>
 <body>	
 
 <%@ include file="navbar.jsp" %>  
 
+
+<%@ include file="footer.jsp" %>
 
 </body>
 </html>
