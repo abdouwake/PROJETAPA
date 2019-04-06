@@ -10,10 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class GetHomeMemberPage
  */
-@WebServlet("/GetHomeMemberPage")
+@WebServlet( "/GetHomeMemberPage" )
 public class GetHomeMemberPage extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	public static final String VUE = "/WEB-INF/VIEWS/Commun/HomeMember/homeMember.jsp"; 
+    private static final long  serialVersionUID = 1L;
+    public static final String VUE              = "/WEB-INF/VIEWS/Commun/HomeMember/homeMember.jsp";
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -22,13 +23,14 @@ public class GetHomeMemberPage extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doGet( HttpServletRequest request, HttpServletResponse response )
+            throws ServletException, IOException {
+        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 
-	}
+    }
 
-	
 }
