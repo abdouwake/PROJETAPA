@@ -1,10 +1,13 @@
 <!-- Footer -->
-<footer class="page-footer font-small blue" style="background-color:#3A1F35;width:100%;">
-  
-<div>
-	<a href="" class=""><img src="${pageContext.request.contextPath }/images/socialmedia.png" style="width: 17%;"></a> 
-	<span style="text-align:center;">  ... </span>
-</div>
+<footer class="page-footer font-small blue"
+	style="background-color: #3A1F35; width: 100%; position: relative; margin-top: 40px;">
+
+	<div>
+		<a href="" class=""><img
+			src="${pageContext.request.contextPath }/images/socialmedia.png"
+			style="width: 17%;"></a> <span style="text-align: center;">
+			... </span>
+	</div>
 
 </footer>
 <!-- Footer -->

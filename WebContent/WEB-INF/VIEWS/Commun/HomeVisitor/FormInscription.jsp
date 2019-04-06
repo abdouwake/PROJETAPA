@@ -107,7 +107,7 @@
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block"> Créer un compte !  </button>
     </div> <!-- form-group// -->      
-    <p class="text-center">Vous avez déjà un compte ? <a href="connexion.jsp">Connexion</a> </p>                                                                 
+    <p class="text-center">Vous avez déjà un compte ? <a href="${pageContext.request.contextPath }/getConnexionPage">Connexion</a> </p>                                                                 
 </form>
 </article>
 </div> <!-- card.// -->

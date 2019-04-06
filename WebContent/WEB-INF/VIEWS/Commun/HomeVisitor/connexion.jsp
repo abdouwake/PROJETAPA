@@ -25,7 +25,7 @@
 	<p class="text-center">Des ressources à perte de vue vous attendent ! </p>
 	
 	
-	<form method="get" action="connexion" width=100% align=center>
+	<form method="get" action="connexion" >
 	
 	 <!-- ********************************************************************************* -->
 	<div class="form-group input-group">
@@ -66,7 +66,7 @@
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block"> Connexion  </button>
     </div>     
-    <p class="text-center">Vous avez déjà un compte ? <a href="FormInscription.jsp">Inscrivez vous !</a> </p>                                                                 
+    <p class="text-center">Vous avez déjà un compte ? <a href="${pageContext.request.contextPath }/GetInscriptionPage">Inscrivez vous !</a> </p>                                                                 
 </form>
 </article>
 </div> <!-- card.// -->
