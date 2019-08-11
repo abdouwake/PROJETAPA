@@ -1,0 +1,52 @@
+.bg-light{
+	background-color :#F9F5F5;
+}
+
+nav li a {
+	color:white;
+}
+
+nav li a:hover{
+	color:#4eea46;
+}
+
+.btn-primary{	 
+	osition : center;
+	margin-top:14px;
+	margin-left:80px;
+    background-color: #3A1F35;
+    border  : none;
+    width:200px;
+    font-size:14px;
+    
+}
+.btn-primary:hover{
+	background-color :  #8c5181 ;
+	border : none;
+}
+
+.btn-outline-secondary{
+ 		 width:350px;
+ 		 margin-top:15px;
+ 		 font-size:14px;
+ } 
+
+.btn-outline-secondary:hover{
+	background-color :  #3A1F35 ;
+	border : none;
+	
+}
+
+.btn-outline-secondary:focus{
+	background-color :  #3A1F35 ;
+	font-color : white;
+}
+
+.bg-light{
+	width:500px;
+}
+
+
+
+
+

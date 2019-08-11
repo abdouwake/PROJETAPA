@@ -65,7 +65,9 @@ nav li a:hover{
 }
 
 
-.footer {
- position : absolute;
- margin-bottom : 0px;
+footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;  
 }

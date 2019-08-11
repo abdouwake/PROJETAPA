@@ -1,0 +1,84 @@
+.tr {
+    margin-top: 25px;   
+}
+
+.mtop-10 {
+    margin-top: 10px;   
+}
+
+.mtop-30 {
+    margin-top: 0px;   
+}
+
+.approver-num {
+    font-size: 30px;
+    position: absolute !important;   
+    color: #fff;
+    margin-left: 49px;
+    margin-top: 40px;
+}
+
+.approver-sprovider {
+    width: 150px;
+	height: 98px;
+    background: #76b900;
+	position: relative;
+}
+.approver-sprovider:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #76b900;
+}
+.approver-sprovider:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 70px solid transparent;
+	border-right: 80px solid transparent;
+	border-top: 25px solid #76b900;
+}
+
+
+.approver-tenant {
+    width: 150px;
+    height: 98px;
+    background: #D3D3D3;
+	position: relative;
+    z-index: -1;
+}
+.approver-tenant:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #D3D3D3;
+}
+.approver-tenant:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 70px solid transparent;
+	border-right: 80px solid transparent;
+	border-top: 25px solid #D3D3D3;
+}
+
+.workflow-person {
+    width: 250px;
+    height: 100px;
+    background: rgba(237,237,237,1);    
+    border: 1px solid #f2f2f2;
+}
