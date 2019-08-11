@@ -36,7 +36,7 @@ public class getConnexionPage extends HttpServlet {
 
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 
-    }
+    } 
 
     /**
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
